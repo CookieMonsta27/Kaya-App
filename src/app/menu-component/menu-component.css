@@ -1,0 +1,107 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 3rem;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links a {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nav-link);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a.nav-active {
+  color: var(--text);
+}
+
+.nav-links a:hover::after,
+.nav-links a.nav-active::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nav-link);
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.nav-cta {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nav-link);
+  text-decoration: none;
+  border: 1px solid var(--nav-border);
+  padding: 0.6rem 1.4rem;
+}
+
+.nav-cta:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
