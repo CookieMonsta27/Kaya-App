@@ -1,7 +1,3 @@
-.page {
-  padding-top: 5rem;
-}
-
 .hero {
   min-height: 92vh;
   display: flex;
@@ -10,16 +6,6 @@
   padding: 6rem 3rem;
   max-width: 56rem;
   margin: 0 auto;
-}
-
-.eyebrow {
-  display: block;
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2.5rem;
-  font-weight: 500;
 }
 
 .hero-title {
@@ -41,7 +27,6 @@
   color: var(--muted);
   margin-bottom: 3rem;
   max-width: 28rem;
-  font-weight: 300;
 }
 
 .text-link {
@@ -58,13 +43,6 @@
 
 .text-link:hover {
   color: var(--accent);
-}
-
-.sep {
-  height: 1px;
-  background: var(--sep);
-  max-width: 56rem;
-  margin: 0 auto;
 }
 
 .services {
@@ -119,5 +97,4 @@
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.7;
-  font-weight: 300;
 }

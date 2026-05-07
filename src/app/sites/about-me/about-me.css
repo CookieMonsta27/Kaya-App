@@ -1,21 +1,7 @@
-.page {
-  padding-top: 5rem;
-}
-
 .about-hero {
   padding: 8rem 3rem 5rem;
   max-width: 56rem;
   margin: 0 auto;
-}
-
-.eyebrow {
-  display: block;
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2.5rem;
-  font-weight: 500;
 }
 
 .about-title {
@@ -30,14 +16,6 @@
   font-size: 1rem;
   color: var(--muted);
   letter-spacing: 0.06em;
-  font-weight: 300;
-}
-
-.sep {
-  height: 1px;
-  background: var(--sep);
-  max-width: 56rem;
-  margin: 0 auto;
 }
 
 .about-body {
@@ -60,7 +38,6 @@
   font-size: 0.975rem;
   line-height: 1.95;
   color: var(--text2);
-  font-weight: 300;
 }
 
 .about-details {
@@ -91,5 +68,4 @@
 .detail-value {
   font-size: 0.92rem;
   color: var(--text);
-  font-weight: 300;
 }
