@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="company">
+      <strong>{{company.name}}</strong> · {{company.legalForm}}<br />
+      {{company.addressLine1}} · {{company.postal}} {{company.country}}<br />
+      Geschäftsführer: {{company.managingDirector}}<br />
+      Handelsregister: {{company.registryCourt}} {{company.hrb}} · USt-IdNr.: {{company.vatId}}
+    </div>
+
+    <div class="contact">
+      Telefon: <a href="tel:{{company.phone}}">{{company.phone}}</a><br />
+      E-Mail: <a href="mailto:{{company.email}}">{{company.email}}</a><br />
+      <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutzerklärung</a> · <a href="/agb">AGB</a>
+    </div>
+  </div>
+
+  <div class="copyright">© {{company.name}} {{nowYear}}</div>
+</footer>
