@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'footer-component',
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './footer-component.html',
   styleUrl: './footer-component.css',
 })

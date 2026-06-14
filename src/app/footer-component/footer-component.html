@@ -10,7 +10,7 @@
     <div class="contact">
       Telefon: <a href="tel:{{company.phone}}">{{company.phone}}</a><br />
       E-Mail: <a href="mailto:{{company.email}}">{{company.email}}</a><br />
-      <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutzerklärung</a> · <a href="/agb">AGB</a>
+      <a [routerLink]="['/impressum']" routerLinkActive="active">Impressum</a> · <a [routerLink]="['/datenschutz']" routerLinkActive="active">Datenschutzerklärung</a> · <a [routerLink]="['/agb']" routerLinkActive="active">AGB</a>
     </div>
   </div>
 
