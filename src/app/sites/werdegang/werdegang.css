@@ -1,0 +1,77 @@
+.werdegang-hero {
+  padding: 8rem 3rem 5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.werdegang-title {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.06;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  font-weight: 900;
+}
+
+.werdegang-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 34rem;
+  line-height: 1.75;
+}
+
+/* ── Timeline ─────────────────────────────── */
+
+.timeline {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 3rem 8rem;
+}
+
+.entry {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:first-child {
+  border-top: 1px solid var(--border);
+}
+
+/* ── Scroll animations ────────────────────── */
+
+.entry-left {
+  opacity: 0;
+  transform: translateY(52px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  max-width: 40rem;
+}
+
+.entry.visible .entry-left {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Entry content ────────────────────────── */
+
+.entry-year {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+
+.entry-title {
+  font-size: 1.85rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.entry-desc {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--muted);
+}

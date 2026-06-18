@@ -17,39 +17,95 @@
   color: var(--muted);
 }
 
+.sep {
+ margin-bottom: 32px;
+}
+
 .works {
-  max-width: 56rem;
+  max-width: 72rem;
   margin: 0 auto;
   padding: 0 3rem 8rem;
 }
 
-.work-item {
+.work-grid {
   display: grid;
-  grid-template-columns: 11rem 1fr 5rem;
-  align-items: center;
-  gap: 3rem;
-  padding: 2.75rem 0;
-  border-bottom: 1px solid var(--border);
-  transition: padding-left 0.35s ease;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 3rem 2.5rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
   cursor: default;
 }
 
-.work-item:first-child {
-  border-top: 1px solid var(--border);
+/* ── Image frame ──────────────────────────── */
+
+.work-img-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--border);
+  border: 1px solid var(--sep);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
-.work-item:hover {
-  padding-left: 0.75rem;
+.work-img-frame::before,
+.work-img-frame::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--sep);
+  border-style: solid;
+  transition: border-color 0.35s ease;
+  z-index: 1;
 }
 
-.work-item:hover .work-info h3 {
-  color: var(--accent);
+.work-img-frame::before {
+  top: 14px;
+  left: 14px;
+  border-width: 1px 0 0 1px;
+}
+
+.work-img-frame::after {
+  bottom: 14px;
+  right: 14px;
+  border-width: 0 1px 1px 0;
+}
+
+.work-img-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, rgba(201, 168, 76, 0.03) 100%);
+}
+
+.work-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.work-card:hover .work-img-frame::before,
+.work-card:hover .work-img-frame::after {
+  border-color: var(--accent);
+}
+
+/* ── Card body ────────────────────────────── */
+
+.work-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .work-meta {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .work-num {
@@ -67,14 +123,19 @@
   font-weight: 500;
 }
 
-.work-info h3 {
-  font-size: 1.4rem;
+.work-title {
+  font-size: 1.2rem;
   color: var(--text);
-  margin-bottom: 0.45rem;
   font-weight: 700;
+  line-height: 1.25;
+  transition: color 0.35s ease;
 }
 
-.work-info p {
+.work-card:hover .work-title {
+  color: var(--accent);
+}
+
+.work-desc {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.65;
@@ -83,6 +144,6 @@
 .work-year {
   font-size: 0.7rem;
   color: var(--dim);
-  text-align: right;
   letter-spacing: 0.08em;
+  margin-top: 0.25rem;
 }
