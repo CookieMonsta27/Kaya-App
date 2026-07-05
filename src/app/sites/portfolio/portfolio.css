@@ -147,3 +147,371 @@
   letter-spacing: 0.08em;
   margin-top: 0.25rem;
 }
+
+/* Make cards clickable */
+.work-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Modal Overlay ────────────────────────────── */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Modal Container ──────────────────────────── */
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  border: 1px solid var(--sep);
+  border-radius: 0.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, -45%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Responsive: Limit width on larger screens */
+@media (min-width: 768px) {
+  .modal-container {
+    width: 80%;
+    max-width: 900px;
+  }
+}
+
+/* ── Modal Header ────────────────────────────── */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid var(--sep);
+  gap: 1rem;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  flex: 1;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background: var(--border);
+  color: var(--accent);
+  outline: none;
+}
+
+/* ── Modal Gallery ────────────────────────────── */
+
+.modal-gallery {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--border);
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  display: block;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery-btn:hover,
+.gallery-btn:focus {
+  background: var(--text);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.gallery-btn:active {
+  transform: translateY(0);
+}
+
+.image-counter {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* ── Modal Content ────────────────────────────── */
+
+.modal-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  background: var(--border);
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.modal-year {
+  font-size: 0.85rem;
+  color: var(--dim);
+  letter-spacing: 0.08em;
+}
+
+.modal-description {
+  flex: 1;
+}
+
+.modal-description p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+  word-spacing: 0.05em;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-details h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.modal-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-details li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.modal-details li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ── Modal Footer Button ──────────────────────────── */
+
+.modal-close-footer {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 2rem;
+  border-radius: 0.25rem;
+}
+
+.modal-close-footer:hover,
+.modal-close-footer:focus {
+  background: var(--text);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.modal-close-footer:active {
+  transform: translateY(0);
+}
+
+/* ── Responsive Design ────────────────────────────── */
+
+@media (max-width: 768px) {
+  .modal-container {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: 95vw;
+    border-radius: 0.5rem;
+  }
+
+  .modal-header {
+    padding: 1.5rem;
+  }
+
+  .modal-gallery {
+    padding: 1.5rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-close-footer {
+    margin: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .gallery-controls {
+    gap: 1rem;
+  }
+
+  .gallery-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .image-counter {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container {
+    max-height: 100vh;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-gallery {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-close-footer {
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .gallery-controls {
+    gap: 0.5rem;
+  }
+
+  .gallery-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .modal-description p {
+    font-size: 0.9rem;
+  }
+}

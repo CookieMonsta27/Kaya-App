@@ -11,82 +11,109 @@
   <section class="works">
     <div class="work-grid">
 
-      <div class="work-card">
-        <div class="work-img-frame">
-          <img src="assets/portfolio/SchwarzerBlazer.jpeg" alt="Schwarzer Maßblazer" />
-        </div>
-        <div class="work-card-body">
-          <div class="work-meta">
-            <span class="work-num">001</span>
-            <span class="work-tag">Maßkleidung</span>
+      @for (item of workItems(); track item.id) {
+        <div class="work-card" (click)="openModal(item)">
+          <div class="work-img-frame">
+            <img [src]="item.images[0]" [alt]="item.title" />
           </div>
-          <h3 class="work-title">Schwarzer Maßblazer</h3>
-          <p class="work-desc">Taillierter Blazer aus schwerem Wollkrepp, von Hand gefertigt. Schmale Revers, verdeckte Knopfleiste — zeitlos und präzise.</p>
-          <span class="work-year">2024</span>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-img-frame">
-          <img src="assets/portfolio/JackeMitSchädeln.jpeg" alt="Jacke mit Schädel-Stickerei" />
-        </div>
-        <div class="work-card-body">
-          <div class="work-meta">
-            <span class="work-num">002</span>
-            <span class="work-tag">Upcycling</span>
+          <div class="work-card-body">
+            <div class="work-meta">
+              <span class="work-num">{{ item.number }}</span>
+              <span class="work-tag">{{ item.tag }}</span>
+            </div>
+            <h3 class="work-title">{{ item.title }}</h3>
+            <p class="work-desc">{{ item.shortDesc }}</p>
+            <span class="work-year">{{ item.year }}</span>
           </div>
-          <h3 class="work-title">Jacke mit Schädel-Stickerei</h3>
-          <p class="work-desc">Upcycled Jacke mit handgestickten Schädelmotiven. Jeder Stich ein Statement — roh, präzise, unverkennbar.</p>
-          <span class="work-year">2024</span>
         </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-img-frame">
-          <img src="assets/portfolio/WesteSchädel.jpeg" alt="Handbestickte Schädel-Weste" />
-        </div>
-        <div class="work-card-body">
-          <div class="work-meta">
-            <span class="work-num">003</span>
-            <span class="work-tag">Upcycling</span>
-          </div>
-          <h3 class="work-title">Handbestickte Schädel-Weste</h3>
-          <p class="work-desc">Weste mit zentralem Schädelmotiv, vollständig von Hand bestickt. Upcycling trifft Punk — ein Stück, das für sich selbst spricht.</p>
-          <span class="work-year">2024</span>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-img-frame">
-          <img src="assets/portfolio/WeißBrauneJacke.jpeg" alt="Zweifarbige Jacke in Weiß und Braun" />
-        </div>
-        <div class="work-card-body">
-          <div class="work-meta">
-            <span class="work-num">004</span>
-            <span class="work-tag">Maßkleidung</span>
-          </div>
-          <h3 class="work-title">Zweifarbige Jacke</h3>
-          <p class="work-desc">Jacke in Weiß und Naturbraun aus handverarbeitetem Leinen. Zwei Materialien, ein ruhiger Dialog zwischen Struktur und Wärme.</p>
-          <span class="work-year">2023</span>
-        </div>
-      </div>
-
-      <div class="work-card">
-        <div class="work-img-frame">
-          <img src="assets/portfolio/BlaueHose.jpeg" alt="Blaue Maßhose" />
-        </div>
-        <div class="work-card-body">
-          <div class="work-meta">
-            <span class="work-num">005</span>
-            <span class="work-tag">Maßkleidung</span>
-          </div>
-          <h3 class="work-title">Blaue Maßhose</h3>
-          <p class="work-desc">Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.</p>
-          <span class="work-year">2023</span>
-        </div>
-      </div>
+      }
 
     </div>
   </section>
 
 </div>
+
+<!-- Modal -->
+@if (isModalOpen()) {
+  <div class="modal-overlay" (click)="closeModal()"></div>
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2 class="modal-title">{{ selectedItem()?.title }}</h2>
+      <button
+        class="modal-close-btn"
+        (click)="closeModal()"
+        aria-label="Close modal"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div class="modal-gallery">
+      <img
+        [src]="selectedItem()!.images[currentImageIndex()]"
+        [alt]="selectedItem()!.title"
+        class="modal-image"
+      />
+      <div class="gallery-controls">
+        <button
+          class="gallery-btn prev-btn"
+          (click)="previousImage()"
+          aria-label="Previous image"
+        >
+          ← Zurück
+        </button>
+        <span class="image-counter">
+          {{ currentImageIndex() + 1 }} / {{ selectedItem()!.images.length }}
+        </span>
+        <button
+          class="gallery-btn next-btn"
+          (click)="nextImage()"
+          aria-label="Next image"
+        >
+          Weiter →
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-content">
+      <div class="modal-meta">
+        <span class="modal-tag">{{ selectedItem()?.tag }}</span>
+        <span class="modal-year">{{ selectedItem()?.year }}</span>
+      </div>
+
+      <div class="modal-description">
+        <p>{{ selectedItem()?.detailedDesc }}</p>
+      </div>
+
+      @if (selectedItem()?.materials) {
+        <div class="modal-details">
+          <h4>Materialien</h4>
+          <ul>
+            @for (material of selectedItem()?.materials; track material) {
+              <li>{{ material }}</li>
+            }
+          </ul>
+        </div>
+      }
+
+      @if (selectedItem()?.techniques) {
+        <div class="modal-details">
+          <h4>Techniken</h4>
+          <ul>
+            @for (technique of selectedItem()?.techniques; track technique) {
+              <li>{{ technique }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+
+    <button
+      class="modal-close-footer"
+      (click)="closeModal()"
+      aria-label="Close modal"
+    >
+      Schließen
+    </button>
+  </div>
+}
