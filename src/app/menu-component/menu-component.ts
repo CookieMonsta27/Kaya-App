@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FeatureFlagsService } from '../feature-flags.service';
 import { ThemeService } from '../theme.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ThemeService } from '../theme.service';
   styleUrl: './menu-component.css',
 })
 export class MenuComponent {
-  constructor(public theme: ThemeService) {}
+  constructor(public theme: ThemeService, public featureFlags: FeatureFlagsService) {}
 
   toggleTheme() {
     this.theme.toggle();

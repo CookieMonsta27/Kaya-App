@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FeatureFlagsService } from '../feature-flags.service';
 
 @Component({
   selector: 'footer-component',
@@ -8,6 +9,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './footer-component.css',
 })
 export class FooterComponent {
+  constructor(public featureFlags: FeatureFlagsService) {}
   company = {
     name: 'Kaya Makes',
     legalForm: 'Yvonne Beck',
