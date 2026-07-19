@@ -126,6 +126,11 @@ export class PortfolioComponent implements OnInit {
     }
   }
 
+  hasMultipleImages(): boolean {
+    const item = this.selectedItem();
+    return !!item && item.images.length > 1;
+  }
+
   @HostListener('document:keydown.escape')
   onEscapeKey(): void {
     if (this.isModalOpen()) {

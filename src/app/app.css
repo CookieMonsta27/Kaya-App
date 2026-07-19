@@ -1,0 +1,11 @@
+.route-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.route-wrapper > * {
+  display: block;
+  width: 100%;
+  position: relative;
+}

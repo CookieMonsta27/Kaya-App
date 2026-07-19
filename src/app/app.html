@@ -1,3 +1,5 @@
 <menu-component></menu-component>
-<router-outlet></router-outlet>
+<div class="route-wrapper" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <footer-component></footer-component>

@@ -22,8 +22,10 @@
       }
     </button>
 
-    <a href="https://instagram.com" target="_blank" rel="noopener" class="nav-cta">
-      Instagram
-    </a>
+    @if (featureFlags.isEnabled('instagramButton')) {
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="nav-cta">
+        Instagram
+      </a>
+    }
   </div>
 </nav>
