@@ -1,5 +1,4 @@
 <div class="page">
-
   <section class="portfolio-hero">
     <span class="eyebrow">Portfolio</span>
     <h1 class="portfolio-title">Meine Arbeiten</h1>
@@ -10,7 +9,6 @@
 
   <section class="works">
     <div class="work-grid">
-
       @for (item of workItems(); track item.id) {
         <div class="work-card" (click)="openModal(item)">
           <div class="work-img-frame">
@@ -22,15 +20,12 @@
               <span class="work-tag">{{ item.tag }}</span>
             </div>
             <h3 class="work-title">{{ item.title }}</h3>
-            <p class="work-desc">{{ item.shortDesc }}</p>
             <span class="work-year">{{ item.year }}</span>
           </div>
         </div>
       }
-
     </div>
   </section>
-
 </div>
 
 <!-- Modal -->
@@ -39,13 +34,7 @@
   <div class="modal-container" (click)="$event.stopPropagation()">
     <div class="modal-header">
       <h2 class="modal-title">{{ selectedItem()?.title }}</h2>
-      <button
-        class="modal-close-btn"
-        (click)="closeModal()"
-        aria-label="Close modal"
-      >
-        ✕
-      </button>
+      <button class="modal-close-btn" (click)="closeModal()" aria-label="Close modal">✕</button>
     </div>
 
     <div class="modal-gallery">
@@ -70,11 +59,7 @@
         </span>
 
         @if (hasMultipleImages()) {
-          <button
-            class="gallery-btn next-btn"
-            (click)="nextImage()"
-            aria-label="Next image"
-          >
+          <button class="gallery-btn next-btn" (click)="nextImage()" aria-label="Next image">
             Weiter →
           </button>
         }
@@ -87,9 +72,16 @@
         <span class="modal-year">{{ selectedItem()?.year }}</span>
       </div>
 
-      <div class="modal-description">
-        <p>{{ selectedItem()?.detailedDesc }}</p>
-      </div>
+      @if (selectedItem()?.details) {
+        <div class="modal-details">
+          <h4>Details</h4>
+          <ul>
+            @for (detail of selectedItem()?.details; track detail) {
+              <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+      }
 
       @if (selectedItem()?.materials) {
         <div class="modal-details">
@@ -114,11 +106,7 @@
       }
     </div>
 
-    <button
-      class="modal-close-footer"
-      (click)="closeModal()"
-      aria-label="Close modal"
-    >
+    <button class="modal-close-footer" (click)="closeModal()" aria-label="Close modal">
       Schließen
     </button>
   </div>

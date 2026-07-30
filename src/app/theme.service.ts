@@ -7,7 +7,7 @@ export class ThemeService {
   theme = signal<'dark' | 'light'>('dark');
 
   toggle() {
-    this.theme.update(value => (value === 'dark' ? 'light' : 'dark'));
+    this.theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
     this.applyTheme();
   }
 

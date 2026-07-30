@@ -3,27 +3,35 @@
 @import '@fontsource/inter/300.css';
 @import '@fontsource/inter/400.css';
 /* Improve touch scrolling on mobile devices */
-html, body {
+html,
+body {
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
   overscroll-behavior-y: auto;
 }
 
 /* Ensure root elements are scrollable on small screens */
-html, body, app-root {
+html,
+body,
+app-root {
   height: auto !important;
   max-height: none !important;
   overflow: auto !important;
 }
 
 /* Allow horizontal scrolling if needed (restore user ability to pan) */
-html, body, app-root {
+html,
+body,
+app-root {
   overflow-x: auto !important;
   overscroll-behavior-x: auto;
 }
 
 /* Ensure media and large elements scale within their containers */
-img, picture, video, iframe {
+img,
+picture,
+video,
+iframe {
   max-width: 100%;
   height: auto;
 }
@@ -35,35 +43,40 @@ img, picture, video, iframe {
 @import '@fontsource/playfair-display/700-italic.css';
 
 :root {
-  --bg:       #080808;
-  --text:     #ede8e0;
-  --muted:    #5a5450;
-  --text2:    #7a706a;
-  --dim:      #222222;
-  --accent:   #c0504d;
+  --bg: #080808;
+  --text: #ede8e0;
+  --muted: #5a5450;
+  --text2: #7a706a;
+  --dim: #222222;
+  --accent: #c0504d;
   overflow: visible !important;
   pointer-events: auto !important;
-  --sep:      #161616;
-  --border:   #111111;
+  --sep: #161616;
+  --border: #111111;
   --nav-link: #4a4540;
-  --nav-bg:   rgba(8, 8, 8, 0.85);
+  --nav-bg: rgba(8, 8, 8, 0.85);
 }
 
 body.light-mode {
-  --bg:       #fafaf8;
-  --text:     #1a1816;
-  --muted:    #9a9088;
-  --text2:    #6a6058;
-  --dim:      #ccc8c2;
-  --sep:      #e0dbd5;
-  --border:   #ebe7e2;
+  --bg: #fafaf8;
+  --text: #1a1816;
+  --muted: #9a9088;
+  --text2: #6a6058;
+  --dim: #ccc8c2;
+  --sep: #e0dbd5;
+  --border: #ebe7e2;
   --nav-link: #8a8076;
-  --nav-bg:   rgba(250, 250, 248, 0.88);
+  --nav-bg: rgba(250, 250, 248, 0.88);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
 }
 
 html {
@@ -81,7 +94,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Playfair Display', Georgia, serif;
   margin: 0;
 }

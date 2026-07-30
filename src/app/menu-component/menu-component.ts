@@ -10,7 +10,10 @@ import { ThemeService } from '../theme.service';
   styleUrl: './menu-component.css',
 })
 export class MenuComponent {
-  constructor(public theme: ThemeService, public featureFlags: FeatureFlagsService) {}
+  constructor(
+    public theme: ThemeService,
+    public featureFlags: FeatureFlagsService,
+  ) {}
 
   toggleTheme() {
     this.theme.toggle();
