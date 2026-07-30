@@ -14,7 +14,7 @@ export class FeatureFlagsService {
   }
 
   setFeature(flag: FeatureFlagName, enabled: boolean): void {
-    this.flags.update(current => ({ ...current, [flag]: enabled }));
+    this.flags.update((current) => ({ ...current, [flag]: enabled }));
   }
 
   toggleFeature(flag: FeatureFlagName): void {

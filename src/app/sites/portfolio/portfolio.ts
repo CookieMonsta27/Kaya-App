@@ -21,78 +21,261 @@ export class PortfolioComponent implements OnInit {
   private initializeWorkItems(): void {
     this.workItems.set([
       {
-        id: 'schwarzer-blazer',
+        id: 'blazer-zier',
         number: '001',
-        title: 'Schwarzer Maßblazer',
+        title: 'Taillierter Blazer mit Ziersteppung',
         tag: 'Maßkleidung',
         year: '2024',
         shortDesc:
           'Taillierter Blazer aus schwerem Wollkrepp, von Hand gefertigt. Schmale Revers, verdeckte Knopfleiste — zeitlos und präzise.',
         images: [
-          'assets/portfolio/schwarzer-blazer/main.jpeg',
-          'assets/portfolio/schwarzer-blazer/detail1.jpeg',
-          'assets/portfolio/schwarzer-blazer/detail2.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier1.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier2.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier3.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier4.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier5.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier6.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier7.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier8.jpeg',
+          'assets/portfolio/BlazerZier/BlazerZier9.jpeg',
         ],
-        detailedDesc:
-          'Dieser charaktervolle Blazer wurde aus schwerem Wollkrepp handgefertigt. Die maßgeschneiderte Silhouette betont die Schultern mit schmalen Revern und einer verdeckten Knopfleiste. Jede Naht wurde mit Präzision gesetzt — ein zeitloser Klassiker, der zu fast allem passt.',
-        materials: ['Wollkrepp', 'Seide', 'Horn-Knöpfe'],
-        techniques: ['Handgenäht', 'Verdeckte Knopfleiste', 'Schmale Revers'],
+        details: [
+          'Reverskragen mit fallendem Fasson',
+          'Längsteilungsnähte und versenkte Leistentasche im Vorderteil',
+          'Kantenabstich abgerundet',
+          'Verschluss mit 3 Schneiderknopflöchern und schwarzen Metallknöpfen',
+          'Hinten Passe mit Ziersteppung und Perlen',
+          '2-Naht-Ärmel mit unechtem Schlitz, abgesteppt',
+          'ganz gefüttert, geflochtener Aufhänger',
+        ],
+        materials: [
+          'Oberstoff: Cool Wool Melange, anthrazit, Wolle',
+          'Futter: Faconne, schwarz, Viskose',
+          'Knöpfe: Metall, schwarz, 4-loch',
+        ],
       },
       {
-        id: 'jacke-mit-schaedeln',
+        id: 'red-blazer',
         number: '002',
-        title: 'Jacke mit Schädel-Stickerei',
+        title: 'Roter Blazer',
         tag: 'Upcycling',
         year: '2024',
         shortDesc:
           'Upcycled Jacke mit handgestickten Schädelmotiven. Jeder Stich ein Statement — roh, präzise, unverkennbar.',
-        images: ['assets/portfolio/JackeMitSchädeln.jpeg'],
-        detailedDesc:
-          'Diese Statement-Jacke ist das Ergebnis von Upcycling und kunstfertiger Handstickerei. Die Schädelmotive wurden Stich für Stich eingestickt und geben der Jacke einen rohen, präzisen Charakter. Ein echtes Statement-Piece für alle, die sich trauen, anders zu sein.',
-        materials: ['Upcycled Denimstoff', 'Stickgarn', 'Metallnieten'],
-        techniques: ['Handgestickt', 'Upcycling', 'Detail-Arbeit'],
+        images: [
+          'assets/portfolio/RedBlazer/BlazerRed1.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed2.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed3.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed4.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed5.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed6.jpeg',
+        ],
+        details: [
+          'V-Auschnitt',
+          'Längsteilungsnähte in Vorder- und Rückteil',
+          'Je eine Paspeltasche im Vorderteil',
+          'Verschluss mit 2 Knopflöchern und Knöpfen',
+          'Kantenabstich abgerundet',
+          '2-Naht-Ärmel mit Schlitz, mit 2 Knopflöchern und Knöpfen geschlossen',
+        ],
+        materials: [
+          'Oberstoff: Gewebe, Rot, Leinen-Baumwoll-Gemisch',
+          'Futter: Futtertaft, Dunkelrot, Viskose',
+          'Knöpfe: Metall, Gold',
+        ],
       },
       {
-        id: 'weste-schaedel',
+        id: 'taillierter-blazer',
         number: '003',
-        title: 'Handbestickte Schädel-Weste',
+        title: 'Taillierter Blazer',
         tag: 'Upcycling',
         year: '2024',
         shortDesc:
           'Weste mit zentralem Schädelmotiv, vollständig von Hand bestickt. Upcycling trifft Punk — ein Stück, das für sich selbst spricht.',
-        images: ['assets/portfolio/WesteSchädel.jpeg'],
-        detailedDesc:
-          'Die Schädel-Weste vereint Upcycling mit aufwendiger Handstickerei. Das zentrale Schädelmotiv wurde vollständig von Hand bestickt und fällt sofort ins Auge. Upcycling trifft hier auf Punk-Ästhetik — ein Stück, das Charakter und Widerstand ausstrahlt.',
-        materials: ['Upcycled Stoff', 'Farbiges Stickgarn', 'Knöpfe'],
-        techniques: ['Vollständig handgestickt', 'Upcycling', 'Punk-Ästhetik'],
+        images: [
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer1.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer2.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer3.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer4.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer5.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer6.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer7.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer8.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer9.jpeg',
+        ],
+        details: [
+          'Reverskragen mit steigendem Fasson',
+          'Längsteilungsnähte und versenkte Leistentasche im Vorderteil',
+          'Kantenabstich abgerundet',
+          'Verschluss mit 3 Knopflöchern und schwarzen Metallknöpfen',
+          '5 Längsteilungsnähte im Rückteil',
+          '2-Naht-Ärmel mit Schlitz, mit 4 Knopflöchern und 4 Metallknöpfen geschlossen',
+          'ganz gefüttert, geflochtener Aufhänger',
+        ],
+        materials: [
+          'Oberstoff: Wollgewebe, rot-schwarz-weiß, Wolle',
+          'Futter: Futterponge, Rot. Viskose',
+          'Knöpfe: Metall, schwarz, 4-loch',
+        ],
       },
       {
-        id: 'zweifarbige-jacke',
+        id: 'guertel-blazer',
         number: '004',
-        title: 'Zweifarbige Jacke',
+        title: 'Blazer mit Gürtel',
         tag: 'Maßkleidung',
         year: '2023',
         shortDesc:
           'Jacke in Weiß und Naturbraun aus handverarbeitetem Leinen. Zwei Materialien, ein ruhiger Dialog zwischen Struktur und Wärme.',
-        images: ['assets/portfolio/WeißBrauneJacke.jpeg'],
-        detailedDesc:
-          'Diese zweiteilige Jacke verbindet zwei hochwertige Leinen-Qualitäten: Weiß und Naturbraun. Der Dialog zwischen den Materialien schafft eine subtile, harmonische Ästhetik. Die gesamte Verarbeitung erfolgte von Hand — von der Naht bis zum Futter.',
-        materials: ['Leinen Weiß', 'Leinen Naturbraun', 'Baumwoll-Futter'],
-        techniques: ['Handgenäht', 'Natürliche Materialien', 'Detailgerechte Verarbeitung'],
+        images: [
+          'assets/portfolio/GuertelBlazer/GuertelBlazer1.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer2.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer3.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer4.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer5.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer6.jpeg',
+        ],
+        details: [
+          'Reverskragen mit fallendem Fasson',
+          'Längs- und Querteilungsnähte im Vorderteil',
+          'Verschluss mit 2 Knopflöchern und 2 Knöpfen',
+          'Kantenabstich abgerundet',
+          'Längsteilungsnähte im Rückteil',
+          'Ziersteppung im Vorder- und Rückteil und über die Schulter',
+          '2-Naht-Ärmel mit unechtem Schlitz, abgesteppt',
+          'Auf den Seitennähten Gürtelschlaufen',
+          'Ganz gefüttert',
+        ],
+        materials: [
+          'Oberstoff: Wollgewebe, blau mit weißen Punkten, Wolle',
+          'Futter: Futterponge, schwarz-rot, Viscose-Polyester-Mischung',
+          'Knöpfe: Holz, braun, 2-loch',
+        ],
       },
       {
-        id: 'blaue-hose',
+        id: 'hose-aufschlag',
         number: '005',
-        title: 'Blaue Maßhose',
+        title: 'Hose mit Aufschlag',
         tag: 'Maßkleidung',
         year: '2023',
         shortDesc:
           'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
-        images: ['assets/portfolio/BlaueHose.jpeg'],
-        detailedDesc:
-          'Eine weite Maßhose in tiefem Blau mit klassischem Schnitt und modernem Tragekomfort. Der hohe Bund bietet Komfort und Eleganz zugleich. Jede Naht wurde von Hand gefasst — ein Klassiker, der zeitlos bleibt.',
-        materials: ['Hochwerti Baumwoll-Mix', 'Leinen-Futter', 'Kupferknopf'],
-        techniques: ['Maßgefertigt', 'Handgefasste Nähte', 'Klassischer Schnitt'],
+        images: [
+          'assets/portfolio/HoseAufschlag/HoseAufschlag1.jpeg',
+          'assets/portfolio/HoseAufschlag/HoseAufschlag2.jpeg',
+        ],
+        details: [
+          'Eingriffstaschen im Vorderteil, einfach abgesteppt',
+          'Reißverschluss und Druckknopf vorn',
+          'Im Rückteil 4 Abnäher',
+          'Seitennähte einfach abgesteppt',
+          'Bügelfalte in Vorder- und Rückhose',
+          'Breiter Aufschlag',
+          'Angesetzter Bund mit 8 Gürtelschlaufen',
+        ],
+        materials: [
+          'Oberstoff: Gewebe mit Karo in schwarz-weiß',
+          'Zutaten: Druckknopf aus Metall, Kunststoff Reißverschluss',
+        ],
+      },
+      {
+        id: 'zweiteiler',
+        number: '006',
+        title: 'Zweiteiler',
+        tag: 'Maßkleidung',
+        year: '2023',
+        shortDesc:
+          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        images: [
+          'assets/portfolio/Zweiteiler/Zweiteiler1.jpeg',
+          'assets/portfolio/Zweiteiler/Zweiteiler2.jpeg',
+        ],
+        details: [
+          'Jacke: Ärmelloses, taillenlanges Jäckchen',
+          'Jacke: Vordere Kante mit Spitzenband verziert',
+          'Hose: Nachttaschen in der Seitennaht',
+          'Hose: Gummibund',
+          'Hose: Bügelfalte in Vorder- und Rückhose',
+          'Hose: Breiter Aufschlag, festgesteppt',
+        ],
+        materials: [
+          'Oberstoff: Baumwollgewebe, mit Totenköpfen und Blumen bedruckt, Baumwolle',
+          'Zutaten: Spitzenband in schwarz',
+        ],
+      },
+      {
+        id: 'dinoHemdjacke',
+        number: '007',
+        title: 'Dinohemd-Jacke',
+        tag: 'Maßkleidung',
+        year: '2023',
+        shortDesc:
+          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        images: [
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke1.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke2.jpeg',
+        ],
+        details: [
+          'Taillenlang',
+          'Steh-Umlegekragen mit Steg',
+          'Angeschnittener Beleg im Vorderteil, außen abgesteppt',
+          'Verschluss vorn mit 4 Knopflöchern und Dino-Knöpfen',
+          'Blusenärmel mit Rollierschlitz und je 2 Falten, Manschette mit einem Knopfloch und Dino-Knopf geschlossen',
+        ],
+        materials: [
+          'Oberstoff 1: schwarzes Gewebe, Baumwolle',
+          'Oberstoff 2: Blaues Gewebe mit aufgedruckten Dino-Skeletten, Baumwolle',
+          'Zutaten: Kunststoff Knöpfe in Dino-Form, in Gelb, Rot, Blau, Lila und Magenta',
+        ],
+      },
+      {
+        id: 'oversizedHemdjacke',
+        number: '008',
+        title: 'Oversized Hemdjacke',
+        tag: 'Maßkleidung',
+        year: '2023',
+        shortDesc:
+          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        images: [
+          'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke1.jpeg',
+          'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke2.jpeg',
+        ],
+        details: [
+          'Steh-Umlegekragen mit Steg',
+          'Verschlusslos',
+          'Im Rückteil abgetrennte Passe, Quetschfalte',
+          'Schulternähte, Ärmeleinsatzähte, Passe und Saum doppelt abgesteppt',
+          'Manschetten und Kragen doppelt abgesteppt, mit Kontrastgarn',
+          'Blusenärmel mit Rollierschlitz und 2 Falten, Manschette mit Sicherheitsnadel geschlossen',
+        ],
+        materials: [
+          'Oberstoff 1: Baumwollgewebe, mit Totenköpfen und Blumen bedruckt, Baumwolle',
+          'Oberstoff 2: feines Gewebe, schwarz, Baumwolle',
+          'Zutaten: Sicherheitsnadeln',
+        ],
+      },
+      {
+        id: 'oversizedFliesjacke',
+        number: '009',
+        title: 'Oversized Fliesjacke',
+        tag: 'Maßkleidung',
+        year: '2023',
+        shortDesc:
+          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        images: [
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke1.jpeg',
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke2.jpeg',
+        ],
+        details: [
+          'Angesetzter Stehkragen',
+          'Aufgesetzte Tasche im Vorderteil',
+          'Reißverschluss vorne bis zum Kragen',
+          'Einnahtärmel',
+        ],
+        materials: [
+          'Oberstoff: Fließstoff, blau, Polyester',
+          'Futter: Single Jersey, grau, Baumwolle',
+          'Zutaten: Kunststoff-Reißverschluss',
+        ],
       },
     ]);
   }
@@ -120,8 +303,7 @@ export class PortfolioComponent implements OnInit {
   previousImage(): void {
     const item = this.selectedItem();
     if (item) {
-      const prevIndex =
-        (this.currentImageIndex() - 1 + item.images.length) % item.images.length;
+      const prevIndex = (this.currentImageIndex() - 1 + item.images.length) % item.images.length;
       this.currentImageIndex.set(prevIndex);
     }
   }

@@ -6,7 +6,7 @@ export interface WorkItem {
   year: string;
   shortDesc: string;
   images: string[];
-  detailedDesc: string;
+  details?: string[];
   materials?: string[];
   techniques?: string[];
 }
