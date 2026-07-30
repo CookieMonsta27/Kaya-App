@@ -4,7 +4,6 @@ export interface WorkItem {
   title: string;
   tag: string;
   year: string;
-  shortDesc: string;
   images: string[];
   details?: string[];
   materials?: string[];

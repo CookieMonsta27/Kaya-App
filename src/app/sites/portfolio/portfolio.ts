@@ -24,10 +24,8 @@ export class PortfolioComponent implements OnInit {
         id: 'blazer-zier',
         number: '001',
         title: 'Taillierter Blazer mit Ziersteppung',
-        tag: 'Maßkleidung',
-        year: '2024',
-        shortDesc:
-          'Taillierter Blazer aus schwerem Wollkrepp, von Hand gefertigt. Schmale Revers, verdeckte Knopfleiste — zeitlos und präzise.',
+        tag: 'Konfektion',
+        year: '2026',
         images: [
           'assets/portfolio/BlazerZier/BlazerZier1.jpeg',
           'assets/portfolio/BlazerZier/BlazerZier2.jpeg',
@@ -58,10 +56,8 @@ export class PortfolioComponent implements OnInit {
         id: 'red-blazer',
         number: '002',
         title: 'Roter Blazer',
-        tag: 'Upcycling',
-        year: '2024',
-        shortDesc:
-          'Upcycled Jacke mit handgestickten Schädelmotiven. Jeder Stich ein Statement — roh, präzise, unverkennbar.',
+        tag: 'Konfektion',
+        year: '2026',
         images: [
           'assets/portfolio/RedBlazer/BlazerRed1.jpeg',
           'assets/portfolio/RedBlazer/BlazerRed2.jpeg',
@@ -88,10 +84,8 @@ export class PortfolioComponent implements OnInit {
         id: 'taillierter-blazer',
         number: '003',
         title: 'Taillierter Blazer',
-        tag: 'Upcycling',
-        year: '2024',
-        shortDesc:
-          'Weste mit zentralem Schädelmotiv, vollständig von Hand bestickt. Upcycling trifft Punk — ein Stück, das für sich selbst spricht.',
+        tag: 'Konfektion',
+        year: '2026',
         images: [
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer1.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer2.jpeg',
@@ -122,10 +116,8 @@ export class PortfolioComponent implements OnInit {
         id: 'guertel-blazer',
         number: '004',
         title: 'Blazer mit Gürtel',
-        tag: 'Maßkleidung',
-        year: '2023',
-        shortDesc:
-          'Jacke in Weiß und Naturbraun aus handverarbeitetem Leinen. Zwei Materialien, ein ruhiger Dialog zwischen Struktur und Wärme.',
+        tag: 'Konfektion',
+        year: '2026',
         images: [
           'assets/portfolio/GuertelBlazer/GuertelBlazer1.jpeg',
           'assets/portfolio/GuertelBlazer/GuertelBlazer2.jpeg',
@@ -155,13 +147,14 @@ export class PortfolioComponent implements OnInit {
         id: 'hose-aufschlag',
         number: '005',
         title: 'Hose mit Aufschlag',
-        tag: 'Maßkleidung',
-        year: '2023',
-        shortDesc:
-          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        tag: 'Konfektion',
+        year: '2026',
         images: [
           'assets/portfolio/HoseAufschlag/HoseAufschlag1.jpeg',
           'assets/portfolio/HoseAufschlag/HoseAufschlag2.jpeg',
+          'assets/portfolio/HoseAufschlag/HoseAufschlag3.jpeg',
+          'assets/portfolio/HoseAufschlag/HoseAufschlag4.jpeg',
+          'assets/portfolio/HoseAufschlag/HoseAufschlag5.jpeg',
         ],
         details: [
           'Eingriffstaschen im Vorderteil, einfach abgesteppt',
@@ -181,13 +174,14 @@ export class PortfolioComponent implements OnInit {
         id: 'zweiteiler',
         number: '006',
         title: 'Zweiteiler',
-        tag: 'Maßkleidung',
+        tag: 'Maßgeschneidert',
         year: '2023',
-        shortDesc:
-          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
         images: [
           'assets/portfolio/Zweiteiler/Zweiteiler1.jpeg',
           'assets/portfolio/Zweiteiler/Zweiteiler2.jpeg',
+          'assets/portfolio/Zweiteiler/Zweiteiler3.jpeg',
+          'assets/portfolio/Zweiteiler/Zweiteiler4.jpeg',
+          'assets/portfolio/Zweiteiler/Zweiteiler5.jpeg',
         ],
         details: [
           'Jacke: Ärmelloses, taillenlanges Jäckchen',
@@ -206,13 +200,14 @@ export class PortfolioComponent implements OnInit {
         id: 'dinoHemdjacke',
         number: '007',
         title: 'Dinohemd-Jacke',
-        tag: 'Maßkleidung',
-        year: '2023',
-        shortDesc:
-          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        tag: 'Maßgeschneidert',
+        year: '2025',
         images: [
           'assets/portfolio/DinoHemdjacke/DinoHemdjacke1.jpeg',
           'assets/portfolio/DinoHemdjacke/DinoHemdjacke2.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke3.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke4.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke5.jpeg',
         ],
         details: [
           'Taillenlang',
@@ -231,13 +226,14 @@ export class PortfolioComponent implements OnInit {
         id: 'oversizedHemdjacke',
         number: '008',
         title: 'Oversized Hemdjacke',
-        tag: 'Maßkleidung',
+        tag: 'Konfektion',
         year: '2023',
-        shortDesc:
-          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
         images: [
           'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke1.jpeg',
           'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke2.jpeg',
+          'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke3.jpeg',
+          'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke4.jpeg',
+          'assets/portfolio/OversizedHemdjacke/OversizedHemdjacke5.jpeg',
         ],
         details: [
           'Steh-Umlegekragen mit Steg',
@@ -257,13 +253,14 @@ export class PortfolioComponent implements OnInit {
         id: 'oversizedFliesjacke',
         number: '009',
         title: 'Oversized Fliesjacke',
-        tag: 'Maßkleidung',
-        year: '2023',
-        shortDesc:
-          'Weite Hose in tiefem Blau, maßgefertigt mit hohem Bund und handgefassten Nähten. Klassisch geschnitten, modern getragen.',
+        tag: 'Maßgeschneidert',
+        year: '2025',
         images: [
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke1.jpeg',
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke2.jpeg',
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke3.jpeg',
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke4.jpeg',
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke5.jpeg',
         ],
         details: [
           'Angesetzter Stehkragen',
