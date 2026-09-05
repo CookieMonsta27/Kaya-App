@@ -262,6 +262,7 @@
 
 /* ── Modal Gallery ────────────────────────────── */
 
+
 .modal-gallery {
   padding: 2rem;
   display: flex;
@@ -269,16 +270,48 @@
   align-items: center;
   gap: 1.5rem;
   background: var(--border);
+  position: relative; /* allow absolute-positioned nav buttons */
 }
 
+/* Allow images to keep their natural aspect ratio. Constrain by viewport
+   so very wide images are shown horizontally while tall images remain
+   vertically oriented. */
 .modal-image {
-  width: 100%;
-  max-width: 600px;
+  width: auto;
+  max-width: 100%;
+  max-height: 70vh; /* keep image inside modal viewport */
   height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0.25rem;
   display: block;
+  margin: 0 auto;
+}
+
+/* wrapper around image to place arrows just outside the image edges */
+.modal-image-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Large transparent overlays covering left/right halves of the gallery. */
+.gallery-side-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2; /* below circular arrows which are z-index:4 */
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.gallery-side-overlay.left { left: 0; right: 50%; }
+.gallery-side-overlay.right { left: 50%; right: 0; }
+
+/* Reduce capture area on small screens to avoid blocking other controls */
+@media (max-width: 480px) {
+  .gallery-side-overlay.left { right: 60%; }
+  .gallery-side-overlay.right { left: 60%; }
 }
 
 .gallery-controls {
@@ -300,6 +333,67 @@
   border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+/* Make prev/next clickable overlays spanning the full gallery height.
+   Buttons are visually invisible (cover large hit area) and show a small
+   circular arrow via ::after. Textual labels are kept for screen readers
+   but hidden visually (font-size:0). */
+.modal-image-wrap .prev-btn,
+.modal-image-wrap .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  z-index: 4;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-size: 0; /* hide textual label visually while keeping it accessible */
+  display: block;
+}
+
+/* place arrows just outside the image (visible and adjacent) */
+.modal-image-wrap .prev-btn { left: -28px; }
+.modal-image-wrap .next-btn { right: -28px; }
+
+/* Small circular arrow indicator — always visible, uses theme variables for contrast */
+.modal-image-wrap .prev-btn::after,
+.modal-image-wrap .next-btn::after {
+  content: '';
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.modal-image-wrap .prev-btn::after { content: '‹'; right: 0; }
+.modal-image-wrap .next-btn::after { content: '›'; left: 0; }
+
+/* Hover/active affordance for the small arrow */
+.modal-image-wrap .prev-btn:hover::after,
+.modal-image-wrap .next-btn:hover::after {
+  transform: translateY(-50%) scale(1.06);
+  filter: brightness(0.95);
+}
+
+/* Keep disabled buttons visually consistent and non-moving */
+.gallery-btn:disabled,
+.modal-gallery .gallery-btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .gallery-btn:hover,

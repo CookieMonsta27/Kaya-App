@@ -38,31 +38,33 @@
     </div>
 
     <div class="modal-gallery">
-      <img
-        [src]="selectedItem()!.images[currentImageIndex()]"
-        [alt]="selectedItem()!.title"
-        class="modal-image"
-      />
-      <div class="gallery-controls">
+      @if (hasMultipleImages()) {
+        <button class="gallery-side-overlay left" (click)="previousImage()" aria-hidden="true"></button>
+        <button class="gallery-side-overlay right" (click)="nextImage()" aria-hidden="true"></button>
+      }
+
+      <div class="modal-image-wrap">
+        <img
+          [src]="selectedItem()!.images[currentImageIndex()]"
+          [alt]="selectedItem()!.title"
+          class="modal-image"
+        />
+
         @if (hasMultipleImages()) {
-          <button
-            class="gallery-btn prev-btn"
-            (click)="previousImage()"
-            aria-label="Previous image"
-          >
-            ← Zurück
+          <button class="gallery-overlay prev-btn" (click)="previousImage()" aria-label="Previous image">
+            <span class="visually-hidden">Zurück</span>
+          </button>
+
+          <button class="gallery-overlay next-btn" (click)="nextImage()" aria-label="Next image">
+            <span class="visually-hidden">Weiter</span>
           </button>
         }
+      </div>
 
+      <div class="gallery-controls">
         <span class="image-counter">
           {{ currentImageIndex() + 1 }} / {{ selectedItem()!.images.length }}
         </span>
-
-        @if (hasMultipleImages()) {
-          <button class="gallery-btn next-btn" (click)="nextImage()" aria-label="Next image">
-            Weiter →
-          </button>
-        }
       </div>
     </div>
 

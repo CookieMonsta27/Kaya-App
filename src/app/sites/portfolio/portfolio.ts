@@ -59,12 +59,12 @@ export class PortfolioComponent implements OnInit {
         tag: 'Konfektion',
         year: '2026',
         images: [
+          'assets/portfolio/RedBlazer/BlazerRed6.jpeg',
+          'assets/portfolio/RedBlazer/BlazerRed4.jpeg',
           'assets/portfolio/RedBlazer/BlazerRed1.jpeg',
           'assets/portfolio/RedBlazer/BlazerRed2.jpeg',
           'assets/portfolio/RedBlazer/BlazerRed3.jpeg',
-          'assets/portfolio/RedBlazer/BlazerRed4.jpeg',
           'assets/portfolio/RedBlazer/BlazerRed5.jpeg',
-          'assets/portfolio/RedBlazer/BlazerRed6.jpeg',
         ],
         details: [
           'V-Auschnitt',
@@ -87,15 +87,15 @@ export class PortfolioComponent implements OnInit {
         tag: 'Konfektion',
         year: '2026',
         images: [
-          'assets/portfolio/TaillierterBlazer/TaillierterBlazer1.jpeg',
-          'assets/portfolio/TaillierterBlazer/TaillierterBlazer2.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer9.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer3.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer2.jpeg',
+          'assets/portfolio/TaillierterBlazer/TaillierterBlazer1.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer4.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer5.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer6.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer7.jpeg',
           'assets/portfolio/TaillierterBlazer/TaillierterBlazer8.jpeg',
-          'assets/portfolio/TaillierterBlazer/TaillierterBlazer9.jpeg',
         ],
         details: [
           'Reverskragen mit steigendem Fasson',
@@ -119,12 +119,12 @@ export class PortfolioComponent implements OnInit {
         tag: 'Konfektion',
         year: '2026',
         images: [
+          'assets/portfolio/GuertelBlazer/GuertelBlazer6.jpeg',
           'assets/portfolio/GuertelBlazer/GuertelBlazer1.jpeg',
-          'assets/portfolio/GuertelBlazer/GuertelBlazer2.jpeg',
           'assets/portfolio/GuertelBlazer/GuertelBlazer3.jpeg',
+          'assets/portfolio/GuertelBlazer/GuertelBlazer2.jpeg',
           'assets/portfolio/GuertelBlazer/GuertelBlazer4.jpeg',
           'assets/portfolio/GuertelBlazer/GuertelBlazer5.jpeg',
-          'assets/portfolio/GuertelBlazer/GuertelBlazer6.jpeg',
         ],
         details: [
           'Reverskragen mit fallendem Fasson',
@@ -203,10 +203,9 @@ export class PortfolioComponent implements OnInit {
         tag: 'Maßgeschneidert',
         year: '2025',
         images: [
-          'assets/portfolio/DinoHemdjacke/DinoHemdjacke1.jpeg',
-          'assets/portfolio/DinoHemdjacke/DinoHemdjacke2.jpeg',
           'assets/portfolio/DinoHemdjacke/DinoHemdjacke3.jpeg',
-          'assets/portfolio/DinoHemdjacke/DinoHemdjacke4.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke2.jpeg',
+          'assets/portfolio/DinoHemdjacke/DinoHemdjacke1.jpeg',
           'assets/portfolio/DinoHemdjacke/DinoHemdjacke5.jpeg',
         ],
         details: [
@@ -256,8 +255,8 @@ export class PortfolioComponent implements OnInit {
         tag: 'Maßgeschneidert',
         year: '2025',
         images: [
-          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke1.jpeg',
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke2.jpeg',
+          'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke1.jpeg',
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke3.jpeg',
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke4.jpeg',
           'assets/portfolio/OversizedFliesjacke/OversizedFliesjacke5.jpeg',
