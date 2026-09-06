@@ -27,6 +27,14 @@ app-root {
   overscroll-behavior-x: auto;
 }
 
+html.modal-open,
+body.modal-open,
+app-root.modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
 /* Ensure media and large elements scale within their containers */
 img,
 picture,

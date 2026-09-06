@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, effect, HostListener, inject, OnInit, Renderer2, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkItem } from './portfolio.types';
 
@@ -9,10 +10,27 @@ import { WorkItem } from './portfolio.types';
   styleUrl: './portfolio.css',
 })
 export class PortfolioComponent implements OnInit {
+  private readonly document = inject(DOCUMENT);
+  private readonly renderer = inject(Renderer2);
+
   workItems = signal<WorkItem[]>([]);
   selectedItem = signal<WorkItem | null>(null);
   currentImageIndex = signal<number>(0);
   isModalOpen = signal<boolean>(false);
+
+  private readonly modalScrollLock = effect((onCleanup) => {
+    const isModalOpen = this.isModalOpen();
+
+    if (isModalOpen) {
+      this.renderer.addClass(this.document.documentElement, 'modal-open');
+      this.renderer.addClass(this.document.body, 'modal-open');
+    }
+
+    onCleanup(() => {
+      this.renderer.removeClass(this.document.documentElement, 'modal-open');
+      this.renderer.removeClass(this.document.body, 'modal-open');
+    });
+  });
 
   ngOnInit(): void {
     this.initializeWorkItems();

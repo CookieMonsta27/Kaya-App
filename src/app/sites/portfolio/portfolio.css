@@ -194,6 +194,8 @@
   max-height: 90vh;
   width: 100%;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -262,7 +264,6 @@
 
 /* ── Modal Gallery ────────────────────────────── */
 
-
 .modal-gallery {
   padding: 2rem;
   display: flex;
@@ -305,13 +306,23 @@
   margin: 0;
   cursor: pointer;
 }
-.gallery-side-overlay.left { left: 0; right: 50%; }
-.gallery-side-overlay.right { left: 50%; right: 0; }
+.gallery-side-overlay.left {
+  left: 0;
+  right: 50%;
+}
+.gallery-side-overlay.right {
+  left: 50%;
+  right: 0;
+}
 
 /* Reduce capture area on small screens to avoid blocking other controls */
 @media (max-width: 480px) {
-  .gallery-side-overlay.left { right: 60%; }
-  .gallery-side-overlay.right { left: 60%; }
+  .gallery-side-overlay.left {
+    right: 60%;
+  }
+  .gallery-side-overlay.right {
+    left: 60%;
+  }
 }
 
 .gallery-controls {
@@ -357,8 +368,12 @@
 }
 
 /* place arrows just outside the image (visible and adjacent) */
-.modal-image-wrap .prev-btn { left: -28px; }
-.modal-image-wrap .next-btn { right: -28px; }
+.modal-image-wrap .prev-btn {
+  left: -28px;
+}
+.modal-image-wrap .next-btn {
+  right: -28px;
+}
 
 /* Small circular arrow indicator — always visible, uses theme variables for contrast */
 .modal-image-wrap .prev-btn::after,
@@ -376,10 +391,16 @@
   border-radius: 999px;
   background: var(--accent);
   color: var(--bg);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
-.modal-image-wrap .prev-btn::after { content: '‹'; right: 0; }
-.modal-image-wrap .next-btn::after { content: '›'; left: 0; }
+.modal-image-wrap .prev-btn::after {
+  content: '‹';
+  right: 0;
+}
+.modal-image-wrap .next-btn::after {
+  content: '›';
+  left: 0;
+}
 
 /* Hover/active affordance for the small arrow */
 .modal-image-wrap .prev-btn:hover::after,

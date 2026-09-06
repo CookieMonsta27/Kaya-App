@@ -39,8 +39,16 @@
 
     <div class="modal-gallery">
       @if (hasMultipleImages()) {
-        <button class="gallery-side-overlay left" (click)="previousImage()" aria-hidden="true"></button>
-        <button class="gallery-side-overlay right" (click)="nextImage()" aria-hidden="true"></button>
+        <button
+          class="gallery-side-overlay left"
+          (click)="previousImage()"
+          aria-hidden="true"
+        ></button>
+        <button
+          class="gallery-side-overlay right"
+          (click)="nextImage()"
+          aria-hidden="true"
+        ></button>
       }
 
       <div class="modal-image-wrap">
@@ -51,7 +59,11 @@
         />
 
         @if (hasMultipleImages()) {
-          <button class="gallery-overlay prev-btn" (click)="previousImage()" aria-label="Previous image">
+          <button
+            class="gallery-overlay prev-btn"
+            (click)="previousImage()"
+            aria-label="Previous image"
+          >
             <span class="visually-hidden">Zurück</span>
           </button>
 
