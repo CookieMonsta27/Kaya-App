@@ -6,7 +6,7 @@ export type FeatureFlagName = 'footer' | 'instagramButton';
 export class FeatureFlagsService {
   private readonly flags = signal<Record<FeatureFlagName, boolean>>({
     footer: false,
-    instagramButton: false,
+    instagramButton: true,
   });
 
   isEnabled(flag: FeatureFlagName): boolean {
